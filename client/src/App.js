@@ -30,17 +30,15 @@ const App = () => {
 
   return (
     <div>
-      <nav>
-        <Link to="/MovieList">MovieList</Link>
-      </nav>
+      
       {console.log("movieList",movieList)}
       <SavedList list={savedList} />
       <Switch>
       <Route path="/MovieList">
         <MovieList movies={movieList}/>
        </Route>
-       <Route path="/MovieList/:id">
-         <Movie />
+       <Route path="/Movies/:id">
+         <Movie movie={movieList}/>
        </Route>
       </Switch>
       
